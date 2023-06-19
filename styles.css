@@ -1,0 +1,265 @@
+
+:root {
+    --main-white: #f0f0f0;
+    --main-red: #be3144;
+    --main-blue: #45567d;
+    --main-gray: #303841;
+
+}
+
+* {
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* box-sizing and font sizing */
+  *,
+  *::before,
+  *::after {
+    box-sizing: inherit;
+  }
+
+html {
+    box-sizing: border-box;
+  
+    /* Set font size for easy rem calculations
+     * default document font size = 16px, 1rem = 16px, 100% = 16px
+     * (100% / 16px) * 10 = 62.5%, 1rem = 10px, 62.5% = 10px
+    */
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+  }
+
+
+body {
+    font-family: 'Poppins', sans-serif ;
+    font-size: 1.8rem;
+    font-weight: 400;
+    line-height: 1.4;
+    color: var(--main-white);
+}
+
+/* start nav*/
+
+#navbar {
+display: flex;
+justify-content: flex-end;
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+min-height: 75px;
+background-color: var(--main-red);
+box-shadow: 0 2px 0 rgb(0, 0, 0 / 40%);
+z-index: 10;
+}
+
+.nav-list {
+    display: flex;
+    margin-right: 2rem;
+    list-style: none;
+    align-items: center;
+    
+    
+    
+}
+
+.nav-list a {
+    text-decoration: none;
+    color: var(--main-white);
+    padding: 2rem;
+    font-size: 2.2rem;
+
+}
+
+/* start section welcome 1*/
+
+#welcome-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  background-color: black;
+
+}
+
+#welcome-section h1 {
+  font-size: 6rem;
+}
+
+#welcome-section p {
+  font-size: 3rem;
+  font-weight: 200;
+  font-style: italic;
+  color: var(--main-red);
+}
+
+/* section projects */
+
+
+.projects-section {
+  padding: 10rem 2rem;
+  background-color: var(--main-blue);
+  text-align: center;
+}
+
+h1{
+  color: var(--main-white);
+}
+
+h2 {
+  font-weight: 700;
+  font-family: sans-serif;
+  text-align: center;
+  font-size: 4rem;
+}
+
+.project-section-header {
+  max-width: 640px;
+  margin: 0 auto 6rem auto;
+  border-bottom: 0.2rem solid var(--main-white);
+
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-gap: 3rem;
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  margin-bottom: 6rem;
+}
+
+a {
+  text-decoration: none;
+  color: var(--main-white);
+}
+.project {
+  background-color: var(--main-gray) ;
+  border-radius: 2px;
+}
+
+.project-image {
+  height: calc(100% - 6.8rem);
+  width: 100%;
+  object-fit: cover;
+}
+
+.project-tile {
+  font-size: 2rem;
+  padding: 1.5rem 0.5rem;
+}
+
+.btn {
+  font-size: 2rem;
+  background-color: var(--main-gray);
+  display: inline-block;
+  padding: 1rem 2rem;
+  border-radius: 2px;
+}
+
+.fa-chevron-right {
+  margin-left: 10px;
+  font-weight: 900;
+  font-family: "Font Awesone 5 Free";
+}
+
+/*
+.fa-chevron-right {
+  content: "\f054";
+}
+
+/* section contact*/
+
+#contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--main-gray);
+  width: 100%;
+  height: 60vh;
+  text-align: center;
+
+}
+
+#contact h2 {
+  font-size: 5rem;
+}
+#contact p {
+    font-size: 2rem;
+    font-weight: 200;
+    font-style: italic;
+    color: var(--main-white)
+}
+
+.contact-links {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  max-width: 800px;
+  flex-wrap: wrap;
+  margin-top: 4rem;
+
+}
+
+.fa-facebook-square {
+  font-family: "Font Awesone 5 Free";
+}
+.fa-github {
+  font-family: "Font Awesone 5 Free";
+}
+.fa-twitter {
+  font-family: "Font Awesone 5 Free";
+}
+.fas-at {
+  font-family: "Font Awesone 5 Free";
+}
+.fa-facebook-square {
+  font-family: "Font Awesone 5 Free";
+}
+.fa-mobile-alt {
+  font-family: "Font Awesone 5 Free";
+}
+
+/*footer*/
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  color: var(--main-white);
+  background-color: var(--main-gray);
+  border-top: 2px solid var(--main-red);
+  width: 100%;
+  height: 10vh;
+  padding: 2rem;
+
+}
+
+@media (max-width: 700px) {
+  #navbar {
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-height: 75px;
+    background-color: var(--main-red);
+    box-shadow: 0 2px 0 rgb(0, 0, 0 / 40%);
+    z-index: 10;
+    }
+
+    h1 {
+      text-align: center;
+    }
+    p {
+      text-align: center;
+    }
+}
+
+
+
